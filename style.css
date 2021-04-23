@@ -4,13 +4,14 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Roboto", sans-serif;
-  background: url("images/bg.png");
+  background: url("images/bg.webp");
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -140,4 +141,22 @@ a.active {
 .calculation-btn:hover {
   background-color: #3352f2;
   color: #fff;
+}
+
+#alert {
+  padding: 0.6rem 0.5rem;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  display: none;
+}
+.success {
+  transition: display 1s ease-in;
+  background-color: hsl(160, 89%, 82%);
+  color: hsl(160, 90%, 35%);
+}
+
+.failed {
+  transition: display 1s ease-in;
+  background-color: hsl(0, 100%, 89%);
+  color: hsl(349, 93%, 40%);
 }
